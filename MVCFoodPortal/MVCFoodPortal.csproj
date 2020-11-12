@@ -195,6 +195,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\cake.jpg" />
+    <Content Include="Images\chicken-biryani.jpg" />
+    <Content Include="Images\chicken-soup.jpg" />
+    <Content Include="Images\Crispy-Chicken.jpg" />
+    <Content Include="Images\Crispy-Corn.jpg" />
+    <Content Include="Images\dessert.jpg" />
+    <Content Include="Images\drinks.jpg" />
+    <Content Include="Images\makki-ki-roti.jpg" />
+    <Content Include="Images\paneerbuttermasala.jpg" />
+    <Content Include="Images\Shirley-Temple.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
