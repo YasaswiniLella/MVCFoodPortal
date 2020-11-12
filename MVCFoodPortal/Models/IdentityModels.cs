@@ -29,5 +29,6 @@ namespace MVCFoodPortal.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Food> Food { get; set; }
     }
 }
