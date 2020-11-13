@@ -49,7 +49,7 @@ namespace MVCFoodPortal.Controllers
         //{
         //    var viewModel = new FoodieViewModel
         //    {
-        //        Foods = new Foods(),
+        //        Foods = new Food(),
 
         //    };
         //    return View("Create", viewModel);
