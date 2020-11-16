@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<MVCFoodPortal.Models.Food>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -36,3 +37,77 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+@*<div class="row">
+        <div class="card" style="width: 18rem;margin-top:50px">
+            <img src="~/Images/cake.jpg" class="card-img-top" alt="" style="height:100px;width:100px">
+            <div class="card-body">
+                <h5 class="card-title">Cake</h5>
+
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+        <div class="card " style="width: 18rem;margin-top:50px">
+            <img src="~/Images/chicken-biryani.jpg" class="card-img-top" alt="" style="height:100px;width:100px">
+            <div class="card-body">
+                <h5 class="card-title">Chicken Biryani</h5>
+
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;margin-top:50px">
+            <img src="~/Images/chicken-soup.jpg" class="card-img-top" alt="" style="height:100px;width:100px">
+            <div class="card-body">
+                <h5 class="card-title">Chicken Soup</h5>
+
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;margin-top:50px">
+            <img src="~/Images/Crispy-Chicken.jpg" class="card-img-top" alt="" style="height:100px;width:100px">
+            <div class="card-body">
+                <h5 class="card-title">Crispy Chicken</h5>
+
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;margin-top:50px">
+            <img src="~/Images/Crispy-Corn.jpg" class="card-img-top" alt="" style="height:100px;width:100px">
+            <div class="card-body">
+                <h5 class="card-title">Crispy Corn</h5>
+
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;margin-top:50px">
+            <img src="~/Images/Shirley-Temple.jpg" class="card-img-top" alt="" style="height:100px;width:100px">
+            <div class="card-body">
+                <h5 class="card-title">Shirley Temple</h5>
+
+                <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+</div>*@
+<div class="row">
+   <div class="col-1"></div>
+    <div class="col-11">
+        <div class="row">
+            @foreach (var foods in Model)
+            {
+                <div class="card m-4" style="width: 18rem;">
+                    <img src="~/Images/@foods.Image" class="card-img-top" alt="" height="300" width="300">
+                    <div class="card-body">
+                        <h5 class="card-title">@foods.OrderName</h5>
+
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
