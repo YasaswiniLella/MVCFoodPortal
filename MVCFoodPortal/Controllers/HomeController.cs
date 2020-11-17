@@ -35,6 +35,11 @@ namespace MVCFoodPortal.Controllers
             return View(food);
 
         }
+        [HttpGet]
+        public ActionResult Search(string searching)
+        {
+            return View(dbContext.Food.Where(x => x.OrderName.Contains(searching) || searching == null).ToList());
+        }
 
     }
 
