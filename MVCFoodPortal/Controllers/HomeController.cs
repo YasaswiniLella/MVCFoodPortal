@@ -28,20 +28,14 @@ namespace MVCFoodPortal.Controllers
 
             return View(foods);
         }
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var food = dbContext.Food.FirstOrDefault(x => x.Id == id);
+            return View(food);
 
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
+        }
 
-        //    return View();
-        //}
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
     }
 
  }
