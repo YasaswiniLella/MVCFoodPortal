@@ -1,0 +1,28 @@
+﻿@model MVCFoodPortal.Models.Food
+@{
+    ViewBag.Title = "Details";
+}
+
+@if (Model == null)
+{
+    <label>No results found</label>
+}
+else
+{
+    <h2 class="m-3">Place your order here</h2>
+    <br />
+    <div class="card m-2" style="width:18rem">
+        <div class="card-header">@Model.OrderName</div>
+
+        <img src="~/Images/@Model.Image" class="card-img-top" width="250" height="200" />
+        <div class="m-3">
+            <p class="float-left">
+                @string.Format("{0:C}",Model.Price)
+            </p>
+            <br />
+            @Html.ActionLink("Place Order", "Details", "Home", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+}
+
+
