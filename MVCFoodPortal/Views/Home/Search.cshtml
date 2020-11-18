@@ -1,27 +1,32 @@
-﻿@model MVCFoodPortal.Models.Food
+﻿@model IEnumerable<MVCFoodPortal.Models.Food>
+
 @{
     ViewBag.Title = "Search";
 }
-@using (Html.BeginForm("Search",""))
 
 @if (Model == null)
 {
     <label>No results found</label>
 }
+
 else
 {
-    <h2 class="m-3">Place your order here</h2>
-    <br />
-    <div class="card m-2" style="width:18rem">
-        <div class="card-header">@Model.OrderName</div>
+    using (Html.BeginForm(FormMethod.Get))
+    {
+        foreach (var item in Model)
+        {
+            <div class="card m-2" style="width:18rem">
+                <div class="card-header">@item.OrderName</div>
 
-        <img src="~/Images/@Model.Image" class="card-img-top" width="250" height="200" />
-        <div class="m-3">
-            <p class="float-left">
-                @string.Format("{0:C}",Model.Price)
-            </p>
-            <br />
-            @Html.ActionLink("Place Order", "Search", "Home", null, new { @class = "btn btn-primary" })
-        </div>
-    </div>
+                <img src="~/Images/@item.Image" class="card-img-top" width="250" height="200" />
+                <div class="m-3">
+                    <p class="float-left">
+                        @string.Format("{0:C}", item.Price)
+                    </p>
+                    <br />
+                    @Html.ActionLink("Place Order", "PlaceOrder", "Home", new { id = item.Id }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        }
+    }
 }
