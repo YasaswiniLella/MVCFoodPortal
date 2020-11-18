@@ -35,8 +35,6 @@ namespace MVCFoodPortal.Controllers
             return View(food);
 
         }
-       
-
 
     }
 
