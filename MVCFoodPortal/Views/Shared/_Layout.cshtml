@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
 
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
 
 </head>
 <body>
@@ -18,19 +22,23 @@
                         <img src="~/images/ZIGGY.jpg" alt="Site Logo" style="height:100px; width: 200px" />
                     </a>
                 </div>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
                 @Html.ActionLink("WELCOME!!!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+
+
 
             <div class="navbar navbar-expand-lg  navbar-brand " style="color:white">
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
+
 
     <div class="container body-content">
         @RenderBody()
@@ -39,6 +47,8 @@
             <p>&copy; @DateTime.Now.Year - Food Blog</p>
         </footer>
     </div>
+
+
 
 
     @Scripts.Render("~/bundles/jquery")

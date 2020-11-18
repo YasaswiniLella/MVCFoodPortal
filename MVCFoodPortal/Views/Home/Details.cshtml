@@ -20,7 +20,7 @@ else
                 @string.Format("{0:C}",Model.Price)
             </p>
             <br />
-            @Html.ActionLink("Place Order", "Details", "Home", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Place Order", "PlaceOrder", "Home", new { id =Model.Id }, new { @class = "btn btn-primary" })
         </div>
     </div>
 }
