@@ -35,12 +35,18 @@ namespace MVCFoodPortal.Controllers
             return View(food);
 
         }
+        [Authorize]
         public ActionResult PlaceOrder(int id)
         {
             var food = dbContext.Food.FirstOrDefault(x => x.Id == id);
             return View(food);
         }
-
+        [HttpGet]
+        public ActionResult Search(string name)
+        {
+            var food = dbContext.Food.Where(x=>x.OrderName.Contains(name)||name==null).ToList();
+            return View(food);
+        }
     }
 
  }

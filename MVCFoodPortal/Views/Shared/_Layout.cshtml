@@ -22,10 +22,11 @@
                         <img src="~/images/ZIGGY.jpg" alt="Site Logo" style="height:100px; width: 200px" />
                     </a>
                 </div>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                {
+                    @*<input class="form-control mr-sm-2" type="search" name="name" autocomplete="off" placeholder="Search" aria-label="Search item">*@
+                    @Html.TextBox("name")<input type="submit" value="Search" />
+                }
 
                 @Html.ActionLink("WELCOME!!!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
