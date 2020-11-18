@@ -35,6 +35,11 @@ namespace MVCFoodPortal.Controllers
             return View(food);
 
         }
+        public ActionResult PlaceOrder(int id)
+        {
+            var food = dbContext.Food.FirstOrDefault(x => x.Id == id);
+            return View(food);
+        }
 
     }
 
